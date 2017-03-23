@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * Simple loader
  * 
  * @author sergio.torres.lozano
- *
+ * 
  */
 @Configuration
 public class ChuckLoader {
