@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.springboot.docker</groupId>
-	<artifactId>springboot-docker-db</artifactId>
+	<artifactId>chuck-db</artifactId>
 	<version>0.1.0</version>
 	<packaging>jar</packaging>
 
-	<name>springboot-docker-db</name>
-	<description>Demo project for Spring Boot and Docker</description>
+	<name>chuck-db</name>
+	<description>Demo project for Spring Boot and Docker. It serves Chuck Norris jokes</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
