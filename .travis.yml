@@ -11,7 +11,12 @@ env:
   global:
      - COMMIT=${TRAVIS_COMMIT::6}
      - REPO=$DOCKER_USERNAME/chuck-service
+     - HEROKU_REPO=$DOCKER_USERNAME/chuck-service
 after_success:
 - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+- docker build -t $REPO:$TRAVIS_BUILD_NUMBER .
+- docker push $REPO
+# Token from heroku auth:token
+- docker login --username=_ --password=${HEROKU_TOKEN} registry.heroku.com
 - docker build -t $REPO:$TRAVIS_BUILD_NUMBER .
 - docker push $REPO
