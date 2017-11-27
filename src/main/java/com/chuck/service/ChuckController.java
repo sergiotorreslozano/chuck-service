@@ -30,4 +30,9 @@ class ChuckController {
 		Random r = new Random();
 		return repository.findOne(r.nextInt(10));
 	}
+
+	@RequestMapping("/health")
+	public @ResponseBody String health(){
+		return "ok";
+	}
 }
