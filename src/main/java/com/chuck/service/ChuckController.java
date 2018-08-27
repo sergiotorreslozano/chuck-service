@@ -1,6 +1,7 @@
 package com.chuck.service;
 
 import java.lang.invoke.MethodHandles;
+import java.util.Optional;
 import java.util.Random;
 
 import org.slf4j.Logger;
@@ -25,10 +26,10 @@ class ChuckController {
 	}
 
 	@RequestMapping("/chuck")
-	public @ResponseBody ChuckFact greeting() {
+	public @ResponseBody Optional<ChuckFact> greeting() {
 		log.debug("Got a request!");
 		Random r = new Random();
-		return repository.findOne(r.nextInt(10));
+		return repository.findById(r.nextInt(10));
 	}
 
 	@RequestMapping("/health")
