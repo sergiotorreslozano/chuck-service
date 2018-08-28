@@ -11,6 +11,9 @@ env:
   global:
      - COMMIT=${TRAVIS_COMMIT::6}
      - REPO=$DOCKER_USERNAME/chuck-service
+before_install:
+# install heroku CLI
+- wget -qO- https://toolbelt.heroku.com/install.sh | sh
 after_success:
 - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 - docker build -t $REPO:$TRAVIS_BUILD_NUMBER .
