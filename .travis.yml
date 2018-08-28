@@ -19,4 +19,5 @@ after_success:
 - docker login -u "$HEROKU_USER" -p "$HEROKU_PASSWORD" registry.heroku.com
 - docker build -t registry.heroku.com/chuck-service/web .
 - docker push registry.heroku.com/chuck-service/web
+- heroku container:release web --app chuck-service
 
