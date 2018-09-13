@@ -15,6 +15,7 @@ before_install:
 # install heroku CLI
 - wget -qO- https://toolbelt.heroku.com/install.sh | sh
 after_success:
+- mvn deploy:deploy-file -Durl="$MAVEN_REPOSITORY_NAME" -DrepositoryId="$MAVEN_REPOSITORY_URL"  -Dfile=./target/chuck-service-0.1.0-stubs.jar -Dclassifier=stubs -DgroupId=com.springboot.docker -DartifactId=chuck-service -Dversion=0.1.0
 - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 - docker build -t $REPO:$TRAVIS_BUILD_NUMBER .
 - docker push $REPO

@@ -1,11 +1,20 @@
 package contracts;
 
 org.springframework.cloud.contract.spec.Contract.make {
+	label("shouldReturnAMockedJoke")
   request {
     method 'GET'
-    url 'http://localhost:7070/chuck'
+    urlPath '/chuck'
   }
 response {
-  status 200
+  status OK()
+  headers{
+	  contentType(applicationJson())
+  }
+  body(
+    id: $(anyNumber()),
+	fact: $(anyNonEmptyString())
+  )
+  
  }
 }
