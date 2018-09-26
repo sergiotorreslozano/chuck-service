@@ -28,3 +28,6 @@ target/
 *.iml
 *.ipr
 
+### Mac ###
+*DS_Store*
+
