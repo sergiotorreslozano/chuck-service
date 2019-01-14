@@ -40,7 +40,6 @@ public class ChuckServiceApplicationTests {
 		ResponseEntity<Map> entity = this.testRestTemplate
 				.getForEntity("http://localhost:" + this.mgt + "/actuator/info", Map.class);
 		assertEquals(entity.getStatusCode(), HttpStatus.OK);
-//		then(entity.getStatusCode()).isEqualTo(HttpStatus.OK);
 	}
 
 }

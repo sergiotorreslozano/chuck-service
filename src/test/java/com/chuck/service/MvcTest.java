@@ -13,12 +13,12 @@ import io.restassured.module.mockmvc.RestAssuredMockMvc;
 @SpringBootTest
 public abstract class MvcTest {
 
-	@Autowired
-	WebApplicationContext context;
+    @Autowired
+    WebApplicationContext context;
 
-	@Before
-	public void setup() {
-		RestAssuredMockMvc.webAppContextSetup(this.context);
-	}
+    @Before
+    public void setup() {
+        RestAssuredMockMvc.webAppContextSetup(this.context);
+    }
 
 }
