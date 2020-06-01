@@ -24,7 +24,7 @@ class ChuckController {
 
 	@RequestMapping("/chuck")
 	public @ResponseBody Optional<ChuckFact> greeting() {
-		return repository.findById(r.nextInt(10));
+		return repository.findById(r.nextInt(20));
 	}
 	
 }
