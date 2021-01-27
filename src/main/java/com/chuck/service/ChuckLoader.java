@@ -26,6 +26,8 @@ public class ChuckLoader {
 	
 	@PostConstruct
 	void init() {
+		repository.save(new ChuckFact(0,
+			"Chuck Norris will never have a heart attack. His heart isn't nearly foolish enough to attack him"));
 		repository.save(new ChuckFact(1,
 				"Chuck Norris was bitten by a cobra and after five days of excruciating pain... the cobra died"));
 		repository.save(new ChuckFact(2,
@@ -44,9 +46,8 @@ public class ChuckLoader {
 				"When Chuck Norris turned 18, his parents moved out"));
 		repository.save(new ChuckFact(9,
 				"When Chuck Norris swims in the ocean, the sharks are in a steel cage"));
-		repository.save(new ChuckFact(0,
-				"Chuck Norris will never have a heart attack. His heart isn't nearly foolish enough to attack him"));
 		repository.save(new ChuckFact(10, "Chuck Norris counted to infinity… twice"));
+		repository.save(new ChuckFact(11, "Chuck Norris can divide by zero"));
 		repository.save(new ChuckFact(12, "Chuck Norris can speak Braille"));
 		repository.save(new ChuckFact(13, "Chuck Norris once won a game of Connect Four in three moves"));
 		repository.save(new ChuckFact(14, "The dark is afraid of Chuck Norris"));
